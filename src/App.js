@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header';
+import SignUpForm from './components/SignUpForm';
 
+// アプリ全体のコンポーネント
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const appStyle = {
+        maxWidth: '600px', // 幅を統一
+        margin: '0 auto', // 中央寄せ
+        padding: '20px', // 少し余白を追加
+        boxSizing: 'border-box', // パディングを含めた幅計算
+    };
+
+    return (
+        <div style={appStyle}>
+            {/* ヘッダー */}
+            <Header />
+            {/* サインアップフォーム */}
+            <SignUpForm />
+        </div>
+    );
 }
 
 export default App;
